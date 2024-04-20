@@ -31,7 +31,7 @@ def main():
         st.session_state.processComplete = None
 
     with st.sidebar:
-        uploaded_files =  st.file_uploader("Upload your file",type=['pdf'],accept_multiple_files=True)
+        uploaded_files =  st.file_uploader("Upload your file",type=['pdf', 'doc', 'csv'],accept_multiple_files=True)
         openai_api_key = openapi_key
         #openai_api_key = st.text_input("OpenAI API Key", key=openapi_key , type="password")
         process = st.button("Process")
